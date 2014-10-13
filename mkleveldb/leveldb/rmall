@@ -1,0 +1,2 @@
+find -name "*.[oe][0-9]?*" | xargs rm
+ls

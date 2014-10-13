@@ -1,0 +1,16 @@
+#PBS -A jiadeng_fluxg
+#PBS -q fluxg
+#PBS -l nodes=1:gpus=1,pmem=8000mb,qos=flux,walltime=3:00:00
+
+#PBS -N four_channel
+#PBS -M chongruo@umich.edu
+#PBS -m abe
+#PBS -j oe
+#PBS -V
+
+cat $PBS_NODEFILE
+
+cd /scratch/jiadeng_fluxg/chongruo/osf_leveldb/osf_leveldb_1/
+pwd
+
+sh create_imagenet_fourchannel.sh
